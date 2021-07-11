@@ -24,7 +24,7 @@ public class DocStorageApplication {
 	}
 
 	@Bean
-	public CommandLineRunner mappingDemo(PersonRepository personRepository,
+	public CommandLineRunner mapping(PersonRepository personRepository,
 										 DocumentRepository documentRepository) {
 		return args -> {
 			//create persons
@@ -34,10 +34,10 @@ public class DocStorageApplication {
 			// save the persons
 			personRepository.saveAll(Arrays.asList(p1,p2,p3));
 			// create docs
-			Document doc1 = Document.builder().category(Document.Category.hr).file(new File("test1File.txt")).date(new Date()).build();
-			Document doc2 = Document.builder().category(Document.Category.hardware).file(new File("test2File.txt")).date(new Date()).build();
-			Document doc3 = Document.builder().category(Document.Category.software).file(new File("test3File.txt")).date(new Date()).build();
-			Document doc4 = Document.builder().category(Document.Category.it).file(new File("test4File.txt")).date(new Date()).build();
+			Document doc1 = Document.builder().category(Document.Category.hr).caption("this is caption of doc1").date(new Date()).build();
+			Document doc2 = Document.builder().category(Document.Category.hardware).caption("this is caption of doc1").date(new Date()).build();
+			Document doc3 = Document.builder().category(Document.Category.software).caption("this is caption of doc1").date(new Date()).build();
+			Document doc4 = Document.builder().category(Document.Category.it).caption("this is caption of doc1").date(new Date()).build();
 			// save docs
 			documentRepository.saveAll(Arrays.asList(doc1, doc2, doc3,doc4));
 			// add docs to the persons
