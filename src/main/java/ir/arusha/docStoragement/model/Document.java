@@ -1,8 +1,8 @@
 package ir.arusha.docStoragement.model;
 
 import lombok.*;
-import javax.persistence.*;
 
+import javax.persistence.*;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -17,13 +17,13 @@ import java.util.Set;
 @Entity
 //@Table(name = "documents")
 public class Document {
-    public static enum Category {hr,software,hardware,it}
     Category category;
     private Date date;
     private String caption;
     @GeneratedValue
     @Id
     private Long id;
-    @ManyToMany( fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY)
     private Set<Person> persons = new HashSet<>();
+    public enum Category {hr, software, hardware, it}
 }

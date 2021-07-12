@@ -28,5 +28,5 @@ public class Person {
 //            inverseJoinColumns = {
 //                    @JoinColumn(name = "documents_id", referencedColumnName = "id",
 //                            nullable = false, updatable = false)})
-    private Set <Document> documentSet = new HashSet<>();
+    private Set<Document> documentSet = new HashSet<>();
 }

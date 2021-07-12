@@ -1,28 +1,26 @@
 package ir.arusha.docStoragement;
 
-import ir.arusha.docStoragement.dao.DocumentRepository;
-import ir.arusha.docStoragement.dao.PersonRepository;
-import ir.arusha.docStoragement.model.Document;
-import ir.arusha.docStoragement.model.Person;
-import org.springframework.boot.CommandLineRunner;
+//import ir.arusha.docStoragement.dao.DocumentRepository;
+//import ir.arusha.docStoragement.dao.PersonRepository;
+//import ir.arusha.docStoragement.model.Document;
+//import ir.arusha.docStoragement.model.Person;
+//import org.springframework.boot.CommandLineRunner;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
-import javax.print.attribute.DateTimeSyntax;
-import java.io.File;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 
 @SpringBootApplication
+//@EnableJpaRepositories(basePackageClasses = {PersonRepository.class, DocumentRepository.class})
 public class DocStorageApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(DocStorageApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(DocStorageApplication.class, args);
+    }
 }
+//	@Autowired
+//	PersonRepository userRepository;
+//	DocumentRepository cityRepository;
 //	@Bean
 //	public CommandLineRunner mapping(PersonRepository personRepository,
 //										 DocumentRepository documentRepository) {
