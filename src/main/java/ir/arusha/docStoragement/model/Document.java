@@ -23,7 +23,7 @@ public class Document {
     @GeneratedValue
     @Id
     private Long id;
-    @ManyToMany(fetch = FetchType.LAZY)
-    private Set<Person> persons = new HashSet<>();
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Set<Person> personsSet ;
     public enum Category {hr, software, hardware, it}
 }
