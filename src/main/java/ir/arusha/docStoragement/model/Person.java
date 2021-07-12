@@ -21,12 +21,5 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-//    @JoinTable(name = "persons_documents",
-//            joinColumns = {
-//                    @JoinColumn(name = "persons_id", referencedColumnName = "id",
-//                            nullable = false, updatable = false)},
-//            inverseJoinColumns = {
-//                    @JoinColumn(name = "documents_id", referencedColumnName = "id",
-//                            nullable = false, updatable = false)})
     private Set<Document> documentSet = new HashSet<>();
 }
