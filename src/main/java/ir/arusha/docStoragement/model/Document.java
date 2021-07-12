@@ -24,6 +24,6 @@ public class Document {
     @GeneratedValue
     @Id
     private Long id;
-    @ManyToMany(mappedBy = "documentSet", fetch = FetchType.LAZY)
+    @ManyToMany( fetch = FetchType.LAZY)
     private Set<Person> persons = new HashSet<>();
 }
